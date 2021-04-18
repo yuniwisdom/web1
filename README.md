@@ -2,6 +2,7 @@
 
 ## what I studied
 생활코딩 web1-html&internet을 공부했다.
+
 강의를 들으며 atom editor를 사용해 실습을 해보았다. 
 
 *html*
