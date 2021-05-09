@@ -1,4 +1,4 @@
-# 2021-spring-web-beginner-may-week-1
+# 2021-spring-web-beginner-May-week-1
 
 ## what I studied
 생활코딩 CSS 와 Javascript 파트를 공부하고 있다.
