@@ -7,54 +7,103 @@
       h1 {
         color:#6b8e23;
         text-align:center;
-        border-bottom: 3px solid steelblue;
+        border-bottom: 3px solid black;
         padding:20px;
         margin:0px;
       }
-      p {
-        border-bottom:1px solid ;
-        border-top:1px solid;
-        padding:10px;
-      }
-      ol {
-        border-right:1px solid ;
+
+      #grid ol {
+        border-right:3px solid black;
         width:100px;
-        margin:10px;
+        margin:0px;
+        padding:20px;
+        padding-left:34px;
+        padding-right:10px;
       }
-      li {
-        color:blue;
+
+      #grid {
+        display:grid;
+        grid-template-columns: 150px 1fr;
       }
-      .saw {
-        color:rgb(100,0,153);
+      #article{
+        padding-left: 10px;
+      }
+      @media(max-width:800px){
+        #grid {
+          display:block;
+        }
+        #grid ol {
+          border-right:none;
+        }
+        h1 {
+          border-bottom: none;
+        }
+        p{
+          font-size:20px;
+        }
       }
       </style>
-
   </head>
 
 <body>
   <h1>NGS(Next Generation Sequencing) </h1>
-  <p><strong>Sanger sequencing method</strong>는 많이 개선되어
-현재는 완전히 자동화되었다. 하지만 하나의 테스트 튜브에서는 한 조각의 DNA만 시퀀싱 할 수 있다.
-한 종의 게놈을 시퀀싱하기 위해서는 게놈을 마구잡이로 조각을 내어 각
-각을 시퀀싱하고 이들을 컴퓨터 알고리즘으로 조립하는 방식을 취하기 때
-문에, 생거방법으로 시퀀싱하기 위해서는 수만개의 조각을 각기 독립적으
-로 시퀀싱해야 한다. 한 대의 시퀀싱 기기에서는 한번에 수천개 정도의 조
-각만을 시퀀싱할 수 있다. 서열을 따라가면서 한 bp씩 차이가 나는 DNA
-분자를 합성하고 이를 전기영동으로 분리한 후에 형광으로 검출하기 때문에,
-많은 양의 시약이 소모되게 된다. 따라서 동시에 시퀀싱할 수 있는
-DNA 조각의 갯수가 제한적이고, 각 조각을 시퀀싱하기 위해서 많은 양의
-시약이 소모된다.</p>
+  <div id="grid">
+      <ol>
+        <li><a href="solexa.html" >Illumina Solexa Sequencing</a></li>
+        <li><a href="ion.html" >Ion torrent</a></li>
+        <input type='button' value="on" onclick="alert('no')">
+        <input type='checkbox'>
+        <input type='text' size="10" onchange="alert('textchange')" >
+        <input type="button" value="night" onclick="
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color='white';
+        ">
+        <input type="button" value="day" onclick="
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color='black';
+        ">
+        <input type="button" value="night" onclick="
+        var target = document.querySelector('body');
+        if(this.value === 'night'){
+          target.style.backgroundColor = 'black';
+          target.style.color='white';
+          this.value='day';
 
-<ol>
-  <li><a href="solexa.html" class="saw">Illumina Solexa Sequencing</a></li>
-  <li>Ion torrent</li>
-</ol>
+        var alist = documnet.querySelectorAll('a');
+        var i = 0;
+          while(i < alist.length){
+            alist[i].style.color='powderblue';
+            i = i + 1;
+          }
+        } else {
+          target.style.backgroundColor = 'white';
+          target.style.color='black';
+          this.value='night';
 
-  <h1>3rd Generation Sequencing</h1>
-<ol>
-  <li>Pac Bio sequencing</li>
-  <li>Oxford Nanospore Sequencing</li>
+          var alist = documnet.querySelectorAll('a');
+          var i = 0;
+            while(i < alist.length){
+              alist[i].style.color='blue';
+              i = i + 1;
+            }
+        }
+        ">
+      </ol>
+      <div id="article">
+          <h2>Sanger sequencing method</h2>
+          <p>Sanger sequencing method는 많이 개선되어
+        현재는 완전히 자동화되었다. 하지만 하나의 테스트 튜브에서는 한 조각의 DNA만 시퀀싱 할 수 있다.
+        한 종의 게놈을 시퀀싱하기 위해서는 게놈을 마구잡이로 조각을 내어 각
+        각을 시퀀싱하고 이들을 컴퓨터 알고리즘으로 조립하는 방식을 취하기 때
+        문에, 생거방법으로 시퀀싱하기 위해서는 수만개의 조각을 각기 독립적으
+        로 시퀀싱해야 한다. 한 대의 시퀀싱 기기에서는 한번에 수천개 정도의 조
+        각만을 시퀀싱할 수 있다. 서열을 따라가면서 한 bp씩 차이가 나는 DNA
+        분자를 합성하고 이를 전기영동으로 분리한 후에 형광으로 검출하기 때문에,
+        많은 양의 시약이 소모되게 된다. 따라서 동시에 시퀀싱할 수 있는
+        DNA 조각의 갯수가 제한적이고, 각 조각을 시퀀싱하기 위해서 많은 양의
+        시약이 소모된다.</p>
+      </div>
+  </div>
 
-</ol>
 </body>
 </html>
